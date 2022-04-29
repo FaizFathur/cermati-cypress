@@ -16,8 +16,6 @@ context('Registration User Cermati', () => {
         cy.get('#lastName').type('QAtest')
         cy.get('#cityAndProvince').type('Jakarta').wait(2000).type('{enter}')
         cy.get('[data-button-name="register-new"]').click()
-        // cy.get('div[class*="Confirmation"]').should('be.visible')
-        // cy.get('div[class*="Confirmation"]').should('contain', 'Email sudah terdaftar')
         cy.url().should('include', '/app/validate-otp')
 
     })
